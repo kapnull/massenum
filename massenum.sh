@@ -27,6 +27,6 @@ echo "[*] Fingerprinting technologies on live domains..."
 httpx -l "$WORKDIR/http/live_domains.txt" -tech-detect -title -status-code -o "$WORKDIR/http/tech_info.txt"
 
 echo "[*] Taking screenshots..."
-gowitness file -f "$WORKDIR/http/live_domains.txt" --threads 50 --timeout 10s -P "$WORKDIR/screenshots/"
+gowitness scan file -f "$WORKDIR/http/live_domains.txt" --screenshot-path "$WORKDIR/screenshots/"
 
 echo "[*] Done. Results saved in $WORKDIR/"
