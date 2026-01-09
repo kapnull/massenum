@@ -2,7 +2,7 @@
   <img src="assets/massenumlogo.png" alt="massenum logo" width="350"/>
 </h1>
 
-A recon tool designed for pentesters working with large domain or IP scopes. It automates resolution, HTTP probing, subdomain enumeration with **scope-based filtering**, port scanning, tech fingerprinting, and screenshotting for up to hundreds of targets.
+A recon tool designed for pentesters working with large domain or IP scopes. It automates resolution, HTTP probing, subdomain enumeration with scope-based filtering, port scanning, tech fingerprinting, and screenshotting for up to hundreds of targets.
 
 ## Key Features
 
