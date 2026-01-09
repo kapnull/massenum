@@ -9,7 +9,7 @@ grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}' "$INPUT" | sort -u > "$WORKDIR/ips/ips.tx
 
 echo "[*] Resolving domains to IPs..."
 dnsx -l "$WORKDIR/domains/domains.txt" -o "$WORKDIR/domains/resolved.txt"
-dnsx -l "$WORKDIR/domains/resolved.txt" -resp -o "$WORKDIR/domains/resolved_with_IPs.txt"
+dnsx -l "$WORKDIR/domains/resolved.txt" -resp -nc -o "$WORKDIR/domains/resolved_with_IPs.txt"
 
 echo "[*] Checking for live HTTP(S) on domains..."
 httpx -l "$WORKDIR/domains/resolved.txt" -silent -threads 100 -o "$WORKDIR/http/live_domains.txt"
