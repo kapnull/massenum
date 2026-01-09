@@ -42,7 +42,7 @@ recon_20260107_1530/
 
 ```
 git clone https://github.com/anenstein/massenum.git
-cd mass-enum
+cd massenum
 ```
 
 #### Install required tools
