@@ -130,3 +130,9 @@ At the end of execution, you'll see:
     - Subdomains in scope: 280
     - Subdomains filtered out: 94
 ```
+
+## Possible issues
+
+#### It suddenly doesn't recognize tools the script depends on?
+
+just run `export PATH=$PATH:$(go env GOPATH)/bin`
