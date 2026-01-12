@@ -51,7 +51,7 @@ Only the first two will be scanned further, while `legacy.example.com` is logged
 #### If you are lazy there's a script in the repo that does it for you
 `prereqs.sh`
 
-[!] It requires Go to be installed
+###### [!] It requires Go to be installed
 
 ## 📁 Output Structure
 ```
