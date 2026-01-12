@@ -99,7 +99,7 @@ This installs:
 - System tools: gowitness
 - libpcap-dev (for naabu)
 
-##### Possible issues
+#### Possible issues
 
 ###### It suddenly doesn't recognize tools the script depends on?
 
