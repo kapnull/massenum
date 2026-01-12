@@ -48,6 +48,10 @@ while IFS= read -r line; do
     fi
 done < "$WORKDIR/subdomains/resolved_with_IPs.txt"
 
+# Deduplicate the results
+sort -u "$WORKDIR/subdomains/live.txt" -o "$WORKDIR/subdomains/live.txt"
+sort -u "$WORKDIR/subdomains/out_of_scope.txt" -o "$WORKDIR/subdomains/out_of_scope.txt"
+
 IN_SCOPE_COUNT=$(wc -l < "$WORKDIR/subdomains/live.txt" 2>/dev/null || echo "0")
 OUT_SCOPE_COUNT=$(wc -l < "$WORKDIR/subdomains/out_of_scope.txt" 2>/dev/null || echo "0")
 echo "[*] Subdomains in scope: $IN_SCOPE_COUNT"
