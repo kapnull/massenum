@@ -58,14 +58,14 @@ echo "[*] Subdomains in scope: $IN_SCOPE_COUNT"
 echo "[*] Subdomains out of scope (filtered): $OUT_SCOPE_COUNT"
 
 echo "[*] Port scanning IPs..."
-naabu -l "$WORKDIR/ips/ips.txt" -top-ports 1000 -o "$WORKDIR/ports/ip_ports.txt"
+naabu -l "$WORKDIR/ips/ips.txt" -p - -o "$WORKDIR/ports/ip_ports.txt"
 
 echo "[*] Port scanning domains..."
-naabu -l "$WORKDIR/domains/resolved.txt" -top-ports 1000 -o "$WORKDIR/ports/domain_ports.txt"
+naabu -l "$WORKDIR/domains/resolved.txt" -p - -o "$WORKDIR/ports/domain_ports.txt"
 
 echo "[*] Port scanning in-scope subdomains..."
 if [ -s "$WORKDIR/subdomains/live.txt" ]; then
-    naabu -l "$WORKDIR/subdomains/live.txt" -top-ports 1000 -o "$WORKDIR/ports/subdomain_ports.txt"
+    naabu -l "$WORKDIR/subdomains/live.txt" -p - -o "$WORKDIR/ports/subdomain_ports.txt"
 fi
 
 echo "[*] Fingerprinting technologies on live domains..."
