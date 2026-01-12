@@ -25,7 +25,7 @@ echo "[*] Checking for live HTTP(S) on domains..."
 httpx -l "$WORKDIR/domains/resolved.txt" -silent -threads 100 -o "$WORKDIR/http/live_domains.txt"
 
 echo "[*] Subdomain enumeration..."
-subfinder -dL "$WORKDIR/domains/domains.txt" -silent -o "$WORKDIR/subdomains/passive.txt"
+subfinder -dL "$WORKDIR/domains/domains.txt" -all -silent -o "$WORKDIR/subdomains/passive.txt"
 
 echo "[*] Resolving subdomains..."
 dnsx -l "$WORKDIR/subdomains/passive.txt" -resp -nc -o "$WORKDIR/subdomains/resolved_with_IPs.txt"
