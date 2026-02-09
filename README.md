@@ -82,7 +82,7 @@ recon_20260109_1530/
 
 ## Installation
 ```bash
-git clone https://github.com/anenstein/massenum.git
+git clone https://github.com/kapnull/massenum.git
 cd massenum
 ```
 
