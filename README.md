@@ -34,9 +34,9 @@ testsite.com         # Resolves to 192.168.1.11
 ```
 
 **Subfinder discovers:**
-- `api.example.com` → 192.168.1.10 ✅ **(kept - matches root domain IP)**
-- `staging.example.com` → 192.168.1.12 ✅ **(kept - matches explicit IP in scope)**
-- `legacy.example.com` → 10.0.0.50 ❌ **(filtered out - not in scope)**
+- `api.example.com` → 192.168.1.10 **(kept - matches root domain IP)**
+- `staging.example.com` → 192.168.1.12 **(kept - matches explicit IP in scope)**
+- `legacy.example.com` → 10.0.0.50 **(filtered out - not in scope)**
 
 Only the first two will be scanned further, while `legacy.example.com` is logged in `out_of_scope.txt`.
 
